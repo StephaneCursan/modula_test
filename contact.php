@@ -53,54 +53,9 @@
 
             <div class="form-bottom contact-form"></div>
 
-                <form action="contact.php" id="contact" method="post">
+                <form action="contact_process.php" id="contact" method="post">
 
                     <div>
-
-                        <div>
-
-                            <?php
-
-                                function isEmail($email) {
-                                    return filter_var($email, FILTER_VALIDATE_EMAIL);
-                                }
-
-                                if ($_POST) {
-                                    
-                                    $name = htmlspecialchars(addslashes($_POST['name']));
-                                    $firstname = htmlspecialchars(addslashes($_POST['firstname']));
-                                    $email = htmlspecialchars(addslashes($_POST['email']));
-                                    $message = htmlspecialchars(addslashes($_POST['message']));
-                                    $captcha = htmlspecialchars(addslashes($_POST['captcha']));
-
-                                    $array = array('nameForm' => '', 'firstnameForm' => '', 'emailForm' => '', 'messageForm' => '', 'captchaForm' => '');
-
-                                    if ($name == '') {
-                                        $array['nameForm'] = 'Veuillez saisir votre nom';
-                                    }
-                                    if ($firstname == '') {
-                                        $array['firstnameForm'] = 'Veuillez saisir votre prénom';
-                                    }
-                                    if (!isEmail($email)) {
-                                        $array['emailForm'] = 'L\'adresse électronique est invalide';
-                                    }
-                                    if ($message == '') {
-                                        $array['messageForm'] = 'Veuillez rédiger votre message';
-                                    }
-                                    if ($captcha != '') {
-                                        $array['captchaForm'] = 'SPAM détecté';
-                                    }
-                                    if ($name != '' && $firstname != '' && isEmail($email) && $message != '' && $captcha == '') {
-                                        echo "<script type='text/javascript'>" . "alert('Votre message a été envoyé avec succès');" . "</script>";
-                                    }
-
-                                    // echo json_encode($array);
-
-                                }
-
-                            ?>
-
-                        </div>
 
                         <p>Merci de renseigner tous les champs.</p>
 
@@ -175,7 +130,7 @@
 
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
                 integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-                
+
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
                 integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
