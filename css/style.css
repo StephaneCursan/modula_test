@@ -1,128 +1,305 @@
-.form-bottom {
-    padding: 25px 25px 30px 25px;
-    background: #ebe6e0;
-    text-align: left;
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+a:hover {
+    text-decoration: none;
 }
 
-.form-bottom,
-form,
-textarea {
-    height: 100px;
+li {
+    list-style-type: none;
 }
 
-.form-bottom, .input-error {
+form p {
+    font-size: 0.9em;
+}
+
+
+/*** header.php start **/
+
+.header {
+    background-color: #a56893dc;
+}
+
+.headerLogo {
+    height: 123px;
+}
+
+.headerBranding_shortname {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: .8;
+}
+
+.headerBreadcrumb {
+    background-color: #ffffc1;
+    line-height: .6;
+}
+
+.headerBreadcrumb a {
+    color: #000;
+    font-weight: bold;
+}
+
+.headerMenu {
+    color: #ccc;
+}
+
+.headerMenu a {
+    font-weight: bold;
+}
+
+/*** header.php end **/
+
+
+/*** index.php start ***/
+
+/* Display of the presentation text */
+
+.homeText {
+    background-color: #f8d134;
+}
+
+.homeText_alinea {
+    text-indent: 40px;
+}
+
+.homeText_footnotesSection {
+    font-size: .7em;
+    line-height: 1.3em;
+}
+
+.homeText_footnote {
+    color: #c3332993;
+    font-weight: bold;
+}
+
+.homeText_exponentText {
+    font-size: .65em;
+}
+
+.homeText_italicText {
+    font-style: italic;
+}
+
+/* Managaement of the carousel */
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.carousel-indicators li {
+    width: 100px;
+    margin: 0 1% 5vh 1%;
+    background-color: #fff;
+  }
+  
+.carousel-indicators .active {
+    background-color: #fd8a68;
+ }
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0.8;
+    width: 100%;
+    height: 11.5vh;
+    bottom: 11.5vh;
+    left: 0;
+}
+
+.carousel-caption h5 {
+    line-height: .7;
+}
+
+/*** index.php end ***/
+
+
+/*** footer.php start ***/
+
+.footer {
+    background-color: #000;
+}
+
+.footer a {
+    color: #fff;
+}
+
+/*** footer.php end ***/
+
+
+/*** contact.php start ***/
+
+.contactForm {
+    background-color: #f8d134;
+}
+
+.contactForm_label {
+    margin-bottom: 1vh;
+    width: 100%;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.contactForm_textInput,
+.contactForm_textarea {
+    width: 100%;
+    height: 6vh;
+    border: 0;
+}
+
+.contactForm_textInput::placeholder {
+    color: #ccc;
+}
+
+.contactForm_textarea {
+    height: 200px;
+    resize: none;
+    padding: 2vh 0 0 2vh;
+}
+
+.contactForm_textInput:hover,
+.contactForm_textInput:focus,
+.contactForm_textarea:hover,
+.contactForm_textarea:focus {
+    background-color: #ffffe8;
+    outline-color: #ff8a68;
+}
+
+.contactForm_chkboxLabel {
+    line-height: 1.2;
+    text-align: justify;
+    font-size: 0.9rem;
+}
+
+/* Checkbox management */
+/* Hide the checkbox */
+
+.contactForm_checkbox:not(:checked),
+.contactForm_checkbox:checked {
+    position: absolute;
+    left: -9999px;
+}
+
+/* Prepare the label */
+
+.contactForm_checkbox:not(:checked) + label,
+.contactForm_checkbox:checked + label {
+    position: relative;
+    padding: 0 0 0 2vw;
+    cursor: pointer;
+}
+
+/* Checkboxes aspect */
+/* :before is for the checkbox */
+
+.contactForm_checkbox:not(:checked) + label:before,
+.contactForm_checkbox:checked + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width : 1.2vw; height: 2.2vh; /* dim. of the checkbox */
+    background-color: #fff;
+}
+
+/* Check symbol aspect */
+
+.contactForm_checkbox:not(:checked) + label:after,
+.contactForm_checkbox:checked + label:after {
+    content: '✔';
+    position: absolute;
+    top: 0.3vh;
+    left: 0.1vw;
+    font-size: 0.8em;
+    color: #65d5e5;
+    transition: all .2s; /* animation incoming */
+}
+
+/* Aspect if "not checked" */
+
+.contactForm_checkbox:not(:checked) + label:after {
+    opacity: 0; /* invisible */
+    transform: scale(0); /* scaled down to 0 */
+}
+
+/* Aspect if "checked" */
+
+.contactForm_checkbox:checked + label:after {
+    opacity: 1; /* visible */
+    transform: scale(1); /* scaled up to normal */
+}
+
+/* Aspect at element's hover */
+
+.contactForm_checkbox:checked:hover + label:before,
+.contactForm_checkbox:hover + label:before {
+    background-color: #ffffe8;
+}
+
+.contactForm_captcha {
+    display: none;
+}
+
+.input-error {
     background-color: #d05a4e;
 }
 
-input[type="text"],
-textarea,
-textarea.form-control {
-    height: 50px;
-    margin: 0;
-    padding: 0 20px;
-    vertical-align: middle;
-    background: #f7f4ed;
-    border: 3px solid #d9d7cb;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 50px;
-    color: #9d9892;
-    -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;
-    -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
-    -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
-}
-
-textarea,
-textarea.form-control {
-    padding: 10px 0;
-    line-height: 30px;
-}
-
-input[type="text"]:focus,
-textarea:focus,
-textarea.form-control:focus {
-    outline: 0;
-    background: #f7f4ed;
-    border: 3px solid #c4c0b4;
-    -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
-}
-
-input[type="text"]:-moz-placeholder,
-textarea:-moz-placeholder,
-textarea.form-control:-moz-placeholder {
-    color: #9d9892;
-}
-
-input[type="text"]:-ms-input-placeholder,
-textarea:-ms-input-placeholder,
-textarea.form-control:-ms-input-placeholder {
-    color: #9d9892;
-}
-
-input[type="text"]::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder,
-textarea.form-control::-webkit-input-placeholder {
-    color: #9d9892;
-}
-
-label {
-    font-weight: 400;
-}
+/* Submit button management */
 
 .btn {
     height: 50px;
-    margin: 0;
     padding: 0 20px;
-    vertical-align: middle;
-    background: #d05a4e;
-    border: 0;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    font-weight: 400;line-height: 50px;
+    background-color: #d05a4e;
     color: #fff;
-    -moz-border-radius: 0;
-    -webkit-border-radius: 0;
-    border-radius: 0;
-    text-shadow: none;
-    -moz-box-shadow: none;
-    -webkit-box-shadow:none;
-    box-shadow: none;
-    -o-transition: all .3s;
-    -moz-transition: all .3s;
-    -webkit-transition: all .3s;
-    -ms-transition: all .3s;
-    transition: all .3s;
 }
 
-.btn:hover {
-    opacity: 0.6; color: #fff;
-}
-
+.btn:hover,
 .btn:active {
-    outline: 0;
     opacity: 0.6;
-    color: #fff;
-    -moz-box-shadow: none;
-    -webkit-box-shadow:none;
-    box-shadow: none;
-}
-
-.btn:focus {
-    outline: 0;
-    opacity: 0.6;
-    background: #d05a4e;
     color: #fff;
 }
 
+.btn:focus,
 .btn:active:focus,
 .btn.active:focus {
-    outline: 0;
     opacity: 0.6;
     background: #d05a4e;
     color: #fff;
 }
 
-.contact-captcha {
-    display: none;
+/*** contact.php end ***/
+
+
+/*** login.php start ***/
+
+.loginForm {
+    background-color: #f8d134;
 }
+
+.loginForm_label {
+    margin-bottom: 1vh;
+    width: 100%;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.loginForm_textInput {
+    width: 100%;
+    height: 6vh;
+    border: 0;
+}
+
+.loginForm_textInput::placeholder {
+    color: #ccc;
+}
+
+.loginForm_alert {
+    font-weight: bold;
+    color: #f00;
+}
+
+/*** login.php end ***/

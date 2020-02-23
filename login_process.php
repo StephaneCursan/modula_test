@@ -20,10 +20,10 @@ if(isset($_POST['username']) && isset($_POST['password']))
     {
         $requete = "SELECT count(*) FROM users where 
               nom_utilisateur = '".$username."' and mot_de_passe = '".$password."' ";
-        $exec_requete = mysqli_query($dbco,$requete);
-        $reponse      = mysqli_fetch_array($exec_requete);
+        $exec_requete = mysqli_query($dbco, $requete);
+        $reponse = mysqli_fetch_array($exec_requete);
         $count = $reponse['count(*)'];
-        if($count!=0) // nom d'utilisateur et mot de passe correctes
+        if($count != 0) // nom d'utilisateur et mot de passe correctes
         {
            $_SESSION['username'] = $username;
            header('Location: backoffice.php');

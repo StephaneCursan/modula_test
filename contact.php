@@ -1,143 +1,99 @@
-<!DOCTYPE html>
+<?php
 
-<html lang="fr">
+    $active_page = "contact";
 
-    <head>
+    include("head.php");
 
-        <!-- Character encoding for the HTML document -->
-        <meta charset="UTF-8">
-        <!-- Gives the browser instructions on how to control the page's dimensions and scaling -->
-        <meta name="viewport"
-              content="width=device-width, user-scalable=no, initial-scale=1.0 maximum-scale=1.0, minimum-scale=1.0">
-        <!-- Defines which Internet Explorer version the webpage should be rendered as -->
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    include("header.php");
 
-        <!-- Title of the webpage -->
-        <title>L'AAGEF-FFI | Les Résistants espagnols en Gironde 1939-1945</title>
+    include("breadcrumb.php");
 
-        <!-- Favicon management -->
-        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    include("menu.php");
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+?>
 
-        <!-- Main CSS -->
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+<main class="container mt-5 pt-5 px-5">
 
-    </head>
+    <section class="mb-5 p-5 contactForm">
 
-    <body>
+        <div class="row">
 
-        <header>
+            <div class="col-lg text-center">
 
-            <nav>
-
-                <ul>
-
-                    <li>
-                        <a href="index.php">Accueil</a>
-                    </li>
-
-                    <li>
-                        <p>Contact</p>
-                    </li>
-
-                </ul>
-
-            </nav>
-
-        </header>
-
-        <main>
-
-            <div class="form-bottom contact-form"></div>
-
-                <form action="contact_process.php" id="contact" method="post">
-
-                    <div>
-
-                        <p>Merci de renseigner tous les champs.</p>
-
-                        <!-- Input fields -->
-                        <div>
-
-                            <div class="form-group">
-
-                                <label class="sr-only" for="name">Nom</label>
-                                <input class="contact-name form-control" type="text" id="name" name="name" placeholder="Nom">
-
-                            </div>
-
-                            <div class="form-group">
-
-                                <label class="sr-only" for="firstname">Prénom</label>
-                                <input class="contact-firstname form-control" type="text" id="firstname" name="firstname" placeholder="Prénom">
-
-                            </div>
-
-                        </div>
-
-                        <div class="form-group">
-
-                            <label class="sr-only" for="email">Adresse électronique</label>
-                            <input class="contact-email form-control" type="text" id="email" name="email" placeholder="Adresse électronique">
-
-                        </div>
-
-                        <div class="form-group">
-
-                            <label class="sr-only" for="message">Message</label>
-                            <textarea class="contact-message form-control" name="message" id="message" cols="30" rows="10"></textarea>
-
-                        </div>
-
-                        <div class="form-group">
-
-                            <input type="checkbox" id="RGPD_Accept" name="RGPD_Accept" value="RGPD_Accept" required>
-                            <label for="RGPD_Accept">J'accepte les RGPD</label>
-
-                        </div>
-
-                        <!-- The following field is for robots only, invisible to humans -->
-
-                        <div class="form-group">
-
-                            <label class="contact-captcha" for="captcha">Veuillez laisser ce champ vide</label>
-                            <input class="contact-captcha form-control" type="text" id="captcha" name="captcha">
-
-                        </div>
-
-                        <div>
-
-                            <input class="btn" type="submit" id="submit" value="Envoyer">
-
-                        </div>
-
-                    </div>
-
-                </form>
+                <h2 class="font-weight-bold text-uppercase formTitle">pour nous contacter</h2>
 
             </div>
 
-        </main>
+        </div>
 
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <form action="contact_process.php" id="contact" method="post" class="p-5">
 
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-                integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+            <p><em>Merci de renseigner tous les champs.</em></p>
 
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-                integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+            <!-- Input fields -->
 
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-                integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+            <div class="row mb-3 mx-0">
 
-        <!-- ... -->
+                <div class="col-lg-6 pr-3 pl-0 d-flex flex-column">
 
-        <script src="js/contact.js"></script>
+                    <label class="contactForm_label" for="name">Nom</label>
+                    <input class="pr-0 pl-3 contactForm_textInput" type="text" id="name" name="name" placeholder="Nom">
 
-    </body>
+                </div>
 
-</html>
+                <div class="col-lg-6 pr-0 pl-3 d-flex flex-column">
+
+                    <label class="contactForm_label" for="firstname">Prénom</label>
+                    <input class="pr-0 pl-3 contactForm_textInput" type="text" id="firstname" name="firstname" placeholder="Prénom">
+
+                </div>
+
+            </div>
+
+            <div class="row mb-3 mx-0">
+
+                <label class="contactForm_label" for="email">Adresse électronique</label>
+                <input class="pr-0 pl-3 contactForm_textInput" type="text" id="email" name="email" placeholder="Adresse électronique">
+
+            </div>
+
+            <div class="row mb-3 mx-0">
+
+                <label class="contactForm_label" for="message">Message</label>
+                <textarea class="contactForm_textarea" name="message" id="message" cols="30" rows="10"></textarea>
+
+            </div>
+
+            <div class="row mb-3 mx-0 pt-2 d-flex flex-column">
+
+                <input class="contactForm_checkbox" type="checkbox" id="RGPD_check" name="RGPD_check" value="RGPD_check" required>
+                <label class="contactForm_chkboxLabel" for="RGPD_check">En cochant cette case et en soumettant ce formulaire, j'accepte que 
+                mes données personnelles soient utilisées pour me recontacter dans le cadre de ma demande indiquée dans ce formulaire.
+                Aucun autre traitement ne sera effectué avec mes informations.</label>
+
+            </div>
+
+            <!-- The following field is for robots only, invisible to humans -->
+
+            <div class="row mx-0">
+
+                <label class="contactForm_captcha mb-0" for="captcha">Veuillez laisser ce champ vide</label>
+                <input class="contactForm_captcha" type="text" id="captcha" name="captcha">
+
+            </div>
+
+            <!-- Validation form button -->
+
+            <div class="text-left">
+
+                <input class="btn" type="submit" id="submit" value="Envoyer">
+
+            </div>
+
+        </form>
+
+    </section>
+
+</main>
+
+<?php include("footer.php"); ?>

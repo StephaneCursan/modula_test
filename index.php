@@ -1,119 +1,194 @@
-<!DOCTYPE html>
+<?php
 
-<html lang="fr">
+    $active_page = "accueil";
 
-    <head>
+    include("head.php");
 
-        <!-- Character encoding for the HTML document -->
-        <meta charset="UTF-8">
-        <!-- Gives the browser instructions on how to control the page's dimensions and scaling -->
-        <meta name="viewport"
-              content="width=device-width, user-scalable=no, initial-scale=1.0 maximum-scale=1.0, minimum-scale=1.0">
-        <!-- Defines which Internet Explorer version the webpage should be rendered as -->
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    include("header.php");
 
-        <!-- Title of the webpage -->
-        <title>L'AAGEF-FFI | Les Résistants espagnols en Gironde 1939-1945</title>
+    include("breadcrumb.php");
 
-        <!-- Favicon management -->
-        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    include("menu.php");
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+?>
 
-        <!-- Main CSS -->
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+<main class="container mt-5 pt-5 px-5">
 
-    </head>
+    <article class="mb-5 p-5 text-justify homeText">
 
-    <body>
+        <div class="row">
 
-        <header>
+            <div class="col-lg text-center">
 
-            <nav>
+                <h2 class="font-weight-bold text-uppercase">qui sommes-nous ?</h2>
 
-                <ul>
+            </div>
 
-                    <li>
-                        <p>Accueil</p>
-                    </li>
+        </div>
 
-                    <li>
-                        <a href="contact.php">Contact</a>
-                    </li>
+        <p class="pt-5 homeText_alinea">
+            L’Amicale des Anciens Guérilleros Espagnols en France — Forces Françaises de l’Intérieur (AAGEF-FFI) est
+            une association — de droit français — d’anciens combattants espagnols <a id="footnote1" href="#note1"
+            class="homeText_footnote">[1]</a>, homologuée par le ministère des Anciens combattants. Sa déclaration a été
+            publiée au Journal Officiel n<sup class="homeText_exponentText">o</sup> 64 du 22 juillet 1976, page 3711. Son
+            siège social est sis 27 rue Émile Cartailhac à Toulouse (Haute-Garonne).
+        <p>
 
-                </ul>
+        <p class="mb-2">
+            Elle fédère neuf sections départementales : Ariège, Aude, Gard-Lozère, Gironde, Haute-Garonne, Hautes-
+            Pyrénées, Lot, Pyrénées-Atlantiques-Landes, Pyrénées- Orientales. L’Amicale de la Gironde a son siège à
+            la Maison du Combattant, 97 rue de Saint-Genès à Bordeaux.
+        </p>
 
-            </nav>
+        <p class="mb-2 homeText_alinea">
+            La Résistance espagnole en France a été largement stimulée et vertébrée par la UNE, mouvement politique
+            pluraliste, lancé en 1941. Geneviève Dreyfus-Armand note avec raison : « <span class="homeText_italicText">l’UNE,
+            structure de large alliance, rassemble non seulement des communistes, mais aussi des Espagnols d’autres
+            horizons politiques — socialistes,républicains ou anarchistes — que la dispersion de leurs organisations
+            et le silence de leurs dirigeants poussent à rejoindre la seule structure de lutte organisée contre le
+            nazisme.</span> » <a id="footnote2" href="#note2" class="homeText_footnote">[2]</a>
+        </p>
 
-        </header>
+        <p class="mb-2">
+            Fin 1941, début 1942, les comités locaux de la UNE, au fur et à mesure qu’ils se constituent, sont
+            appelés à désigner des responsables pour former des groupes de guérilleros. Il s’agit alors de récolter
+            armes et explosifs, organiser des sabotages, plus tard des attentats. En avril 1942, des responsables
+            guérilleros de plusieurs départements se réunissent en Ariège, dans l’Aude, la Haute-Garonne, pour former
+            le noyau du <span class="homeText_italicText"> XIV Cuerpo de Guerrilleros Españoles en Francia </span><a id="footnote3"
+            href="#note3" class="homeText_footnote">[3]</a> qui va devenir le bras armé de la UNE en zone sud — appelée zone
+            libre jusqu’au 11 novembre. En décembre 1943, l’état-major du XIVe Corps contrôle les unités espagnoles
+            d’une trentaine de départements.
+        </p>
 
-        <main>
+        <p class="mb-2">
+            Début mai 1944, le XIV<sup class="homeText_exponentText">e</sup> Corps prend le nom de <span class="homeText_italicText"> 
+            Agrupación de Guerrilleros Españoles (AGE) </span><a id="footnote4" href="#note4" class="homeText_footnote">[4]</a>. 
+            Elle est alors directement rattachée aux FFI. Comme FFI, les guérilleros participent partout très activement aux
+            combats de la Libération.
+        </p>
 
-            <div id="diaporama" class="carousel slide" data-ride="carousel">
+        <p class="mb-5 pb-5">
+            En 1945, l’Amicale des Anciens FFI et Résistants Espagnols est fondée à Toulouse, présidée par Luis
+            Fernández, général FFI. Elle est, hélas, honteusement interdite en 1950 et ses dirigeants pourchassés, à
+            la grande satisfaction du dictateur Franco et de son pouvoir fasciste <a id="footnote5" href="#note5"
+            class="homeText_footnote">[5]</a>. Il faudra attendre 1976 pour qu’elle puisse se reconstituer sous son nom actuel.
+        </p>
 
-                <ol class="carousel-indicators">
+        <div class="mb-5 homeText_footnotesSection">
 
-                    <li data-target="#diaporama" data-slide-to="0" class="active"></li>
-                    <li data-target="#diaporama" data-slide-to="1"></li>
-                    <li data-target="#diaporama" data-slide-to="2"></li>
-                    <li data-target="#diaporama" data-slide-to="3"></li>
+            <div class="w-25 pt-2 border-top border-dark"></div>
+            <p id="note1" class="mb-1">
+                [1].<a href="#footnote1" class="homeText_footnote">↑</a> Affiliée à l’ANACR (Association Nationale des Anciens
+                Combattants de la Résistance) et, en raison de cette appartenance, à l’UFAC (Union Française des
+                Anciens Combattants et de victimes de guerre), la FIR (Fédération Internationale des Résistants), et
+                la FMAC (Fédération Mondiale des Anciens Combattants)
+            </p>
+            <p id="note2" class="mb-1">
+                [2].<a href="#footnote2" class="homeText_footnote">↑</a> Geneviève Dreyfus-Armand, <span class="homeText_italicText">
+                L’Exil des Républicains espagnols en France : De la Guerre civile à la mort de Franco</span>span>,
+                1999, Paris, Albin Michel, p. 163
+            </p>
+            <p id="note3" class="mb-1">
+                [3].<a href="#footnote3" class="homeText_footnote">↑</a><span class="homeText_italicText"> XIV<sup class="homeText_exponentText">e
+                </sup> Corps de Guérilleros Espagnols en France</span>
+            </p>
+            <p id="note4" class="mb-1">
+                [4].<a href="#footnote4" class="homeText_footnote">↑</a><span class="homeText_italicText"> Groupement de Guérilleros
+                Espagnols</span>
+            </p>
+            <p id="note5">
+                [5].<a href="#footnote5" class="homeText_footnote">↑</a>Terme qu’il chercha à minimiser en le substituant par
+                « franquisme »
+            </p>
 
-                </ol>
+        </div>
 
-                <div class="carousel-inner">
+        <!--- Carousel management -->
 
-                    <div class="carousel-item active">
+        <div id="diaporama" class="carousel slide carousel-fade" data-ride="carousel">
 
-                        <img src="images/defile_19440916.jpg" class="d-block w-100" alt="">
+            <div class="row mb-5">
 
-                    </div>
+                <div class="col-lg text-center">
 
-                    <div class="carousel-item">
+                    <h2 class="font-weight-bold text-uppercase formTitle">ouvrons l'album photos...</h2>
 
-                        <img src="images/hommage_annuel_Prayols.jpg" class="d-block w-100" alt="">
+                </div>
 
-                    </div>
+            </div>
 
-                    <div class="carousel-item">
+            <!-- Display of indicators -->
 
-                        <img src="images/monument_morts_PSanchez.jpg" class="d-block w-100" alt="">
+            <ol class="carousel-indicators">
 
-                    </div>
+                <li data-target="#diaporama" data-slide-to="0" class="active"></li>
+                <li data-target="#diaporama" data-slide-to="1"></li>
+                <li data-target="#diaporama" data-slide-to="2"></li>
 
-                    <div class="carousel-item">
+            </ol>
 
-                        <img src="images/hommage_policiers_Cenon.jpg" class="d-block w-100" alt="">
+            <!-- Display of images -->
 
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+
+                    <img src="images/hommage_annuel_Prayols.jpg" class="d-block w-100" alt="Hommage aux guérilleros espagnols">
+
+                    <!-- Display of an image caption -->
+
+                    <div class="carousel-caption pt-4 d-none d-md-block">
+                        <h5>Monument national de Prayols (Ariège)</h5>
+                        <p>Hommage aux guérilleros espagnols, le 4 juin 2016</p>
                     </div>
 
                 </div>
 
-                <a class="carousel-control-prev" href="#diaporama" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Précédent</span>
-                </a>
+                <div class="carousel-item">
 
-                <a class="carousel-control-next" href="#diaporama" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Suivant</span>
-                </a>
+                    <img src="images/monument_morts_PSanchez.jpg" class="d-block w-100" alt="Dévoilement du nom de Pablo Sánchez">
+
+                    <!-- Display of an image caption -->
+
+                    <div class="carousel-caption pt-4 d-none d-md-block">
+                        <h5>Monument aux morts de la ville de Bordeaux</h5>
+                        <p>Dévoilement du nom de Pablo Sánchez, le 3 mai 2018</p>
+                    </div>
+
+                </div>
+
+                <div class="carousel-item">
+
+                    <img src="images/hommage_policiers_Cenon.jpg" class="d-block w-100" alt="Inauguration d'une stèle en hommage
+                    aux policiers morts pour la France">
+
+                    <!-- Display of an image caption -->
+
+                    <div class="carousel-caption pt-4 d-none d-md-block">
+                        <h5>Commissariat de police de Cenon</h5>
+                        <p>Inauguration d'une stèle en hommage aux policiers morts pour la France, le 12 décembre 2018.</p>
+                    </div>
+
+                </div>
 
             </div>
 
-        </main>
+            <!-- Management of images scroll buttons -->
 
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+            <a class="carousel-control-prev" href="#diaporama" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Précédent</span>
+            </a>
 
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-                integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-                integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-                integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+            <a class="carousel-control-next" href="#diaporama" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Suivant</span>
+            </a>
 
-    </body>
+        </div>
 
-</html>
+    </article>
+
+</main>
+
+<?php include("footer.php"); ?>

@@ -1,74 +1,90 @@
-<!DOCTYPE html>
+<?php
 
-<html lang="fr">
+    include("head.php");
 
-    <head>
+    include("header.php");
 
-        <!-- Character encoding for the HTML document -->
-        <meta charset="UTF-8">
-        <!-- Gives the browser instructions on how to control the page's dimensions and scaling -->
-        <meta name="viewport"
-              content="width=device-width, user-scalable=no, initial-scale=1.0 maximum-scale=1.0, minimum-scale=1.0">
-        <!-- Defines which Internet Explorer version the webpage should be rendered as -->
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+?>
 
-        <!-- Title of the webpage -->
-        <title>L'AAGEF-FFI | Les Résistants espagnols en Gironde 1939-1945</title>
+<main class="container mt-5 pt-5 px-5">
 
-        <!-- Favicon management -->
-        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <section class="mb-5 p-5 loginForm">
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!-- Login form -->
 
-        <!-- Main CSS -->
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <div class="row">
 
-    </head>
+            <div class="col-lg text-center">
 
-    <body>
+                <h2 class="font-weight-bold text-uppercase formTitle">identifiez-vous</h2>
 
-        <div>
-            <!-- zone de connexion -->
-            
-            <form action="login_process.php" method="POST">
-
-                <h1>Connexion</h1>
-                
-                <div>
-
-                    <label><b>Nom d'utilisateur</b></label>
-                    <input type="text" placeholder="Entrer le nom d'utilisateur" name="username" required>
-
-                </div>
-
-                <div>
-
-                    <label><b>Mot de passe</b></label>
-                    <input type="password" placeholder="Entrer le mot de passe" name="password" required>
-
-                </div>
-
-                <input type="submit" id='submit' value='Se connecter'>
-
-                <?php
-
-                    if (isset($_GET['erreur'])){
-
-                        $err = $_GET['erreur'];
-
-                        if ($err==1 || $err==2) {
-                            echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
-                        }
-                    }
-
-                ?>
-
-            </form>
+            </div>
 
         </div>
 
-    </body>
+        <form action="login_process.php" id="login" method="post" class="p-5">
 
-</html>
+            <!-- Input fields -->
+
+            <div class="row mb-3 mx-0">
+
+                <div class="col-lg-6 offset-lg-3">
+
+                    <label class="loginForm_label" for="username">Identifiant</label>
+                    <input class="pr-0 pl-3 loginForm_textInput" type="text" id="username" name="username" placeholder="Identifiant" required>
+
+                </div>
+
+            </div>
+
+            <div class="row mb-2 mx-0">
+
+                <div class="col-lg-6 offset-lg-3">
+
+                    <label class="loginForm_label" for="password">Mot de passe</label>
+                    <input class="pr-0 pl-3 loginForm_textInput" type="password" id="password" name="password" placeholder="Mot de passe" required>
+
+                </div>
+
+            </div>
+
+            <!-- Validation form button -->
+
+            <div class="row mb-4 mx-0">
+
+                <div class="col-lg-6 offset-lg-3 text-right">
+
+                    <input class="btn" type="submit" id='submit' value='Se connecter'>
+
+                </div>
+
+            </div>
+
+            <?php
+
+                /* Errors handling */
+
+                if (isset($_GET['erreur'])){
+
+                    $err = $_GET['erreur'];
+
+                    if ($err==1 || $err==2) {
+
+                        echo "<div class='row mx-0'>";
+                        echo "<div class='col-lg-6 offset-lg-3'>";
+                        echo "<p class='loginForm_alert'>L'identifiant ou le mot de passe est incorrect</p>";
+                        echo "</div>";
+                        echo "</div>";
+
+                    }
+                }
+
+            ?>
+
+        </form>
+
+    </section>
+
+</main>
+
+<?php include("footer.php"); ?>
