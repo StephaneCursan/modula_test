@@ -135,9 +135,9 @@
 
                     <img src="images/hommage_annuel_Prayols.jpg" class="d-block w-100" alt="Hommage aux guérilleros espagnols">
 
-                    <!-- Display of an image caption -->
+                    <!-- Display of image caption -->
 
-                    <div class="carousel-caption pt-4 d-none d-md-block">
+                    <div class="carousel-caption pt-4 pt-md-3 d-none d-md-block">
                         <h5>Monument national de Prayols (Ariège)</h5>
                         <p>Hommage aux guérilleros espagnols, le 4 juin 2016</p>
                     </div>
@@ -150,7 +150,7 @@
 
                     <!-- Display of an image caption -->
 
-                    <div class="carousel-caption pt-4 d-none d-md-block">
+                    <div class="carousel-caption pt-4 pt-md-3 d-none d-md-block">
                         <h5>Monument aux morts de la ville de Bordeaux</h5>
                         <p>Dévoilement du nom de Pablo Sánchez, le 3 mai 2018</p>
                     </div>
@@ -164,7 +164,7 @@
 
                     <!-- Display of an image caption -->
 
-                    <div class="carousel-caption pt-4 d-none d-md-block">
+                    <div class="carousel-caption pt-4 pt-md-3 d-none d-md-block">
                         <h5>Commissariat de police de Cenon</h5>
                         <p>Inauguration d'une stèle en hommage aux policiers morts pour la France, le 12 décembre 2018.</p>
                     </div>

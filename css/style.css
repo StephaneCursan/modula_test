@@ -244,10 +244,6 @@ form p {
     display: none;
 }
 
-.input-error {
-    background-color: #d05a4e;
-}
-
 /* Submit button management */
 
 .btn {
@@ -271,7 +267,48 @@ form p {
     color: #fff;
 }
 
+.contactWarning,
+.contactSuccess {
+    font-weight: bold;
+}
+
+.contactWarning {
+    color: #f00;
+}
+
+.contactSuccess {
+    color: #1b5f1b;
+}
+
 /*** contact.php end ***/
+
+
+/*** contact_process.php start ***/
+
+.alert_backContact {
+    width: 100px;
+    height: 50px;
+    background-color: #d05a4e;
+}
+
+.alert_backContact a {
+    color: #fff;
+}
+
+/*** contact_process.php end ***/
+
+
+/*** backoffice.php start ***/
+
+.headerBreadcrumb a.logoutSession_button {
+    background-color: #d05a4e;
+    padding: 12px;
+    color: #fff;
+    font-weight: normal;
+    font-size: 0.8em;
+}
+
+/*** backoffice.php end ***/
 
 
 /*** login.php start ***/
@@ -303,3 +340,97 @@ form p {
 }
 
 /*** login.php end ***/
+
+
+/*** Media Queries CSS ***/
+
+@media (max-width: 992px) {
+
+/*** header.php start ***/
+
+.headerLogo {
+    margin-left: 2vw;
+}
+
+.headerBranding_shortname {
+    margin-top: 1.8vh;
+    padding-left: 3vw;
+    font-size: 3.2em;
+}
+
+.headerBranding_longname {
+    padding-left: 3vw;
+    font-size: 1.3em;
+}
+
+/*** header.php end ***/
+
+/*** index.php start ***/
+
+.carousel-caption h5 {
+    margin-top: 0.4vh;
+}
+
+.contactSuccess {
+    font-size: 0.75em;
+}
+
+/*** index.php end ***/
+
+/*** backoffice.php start ***/
+
+.table {
+    font-size: 0.8em;;
+}
+
+/*** backoffice.php end ***/
+  
+}
+  
+@media (max-width: 768px) {
+
+/*** header.php start ***/
+
+.headerBranding_shortname {
+    margin-top: 3.5vh;
+    padding-left: 5vw;
+    font-size: 2.5em;
+}
+
+.headerBranding_longname {
+    padding-left: 5vw;
+    font-size: 1em;
+}
+
+/*** header.php end ***/
+
+/*** index.php start ***/
+
+.carousel-caption h5 {
+    margin-top: 1vh;
+    font-size: 1.1em;
+}
+
+.carousel-caption p {
+    font-size: 0.7em;
+}
+
+/*** index.php end ***/
+
+/*** footer.php start ***/
+
+.footer a {
+    font-size: 0.7em;
+}
+
+/*** footer.php end ***/
+
+/*** backoffice.php start ***/
+
+.table {
+    font-size: 0.7em;;
+}
+
+/*** backoffice.php end ***/
+  
+}

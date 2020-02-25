@@ -20,7 +20,7 @@
 
             <div class="col-lg text-center">
 
-                <h2 class="font-weight-bold text-uppercase formTitle">pour nous contacter</h2>
+                <h2 class="font-weight-bold text-uppercase">pour nous contacter</h2>
 
             </div>
 
@@ -34,17 +34,17 @@
 
             <div class="row mb-3 mx-0">
 
-                <div class="col-lg-6 pr-3 pl-0 d-flex flex-column">
+                <div class="col-lg-6 pr-lg-3 pr-sm-0 pl-0 d-flex flex-column">
 
                     <label class="contactForm_label" for="name">Nom</label>
-                    <input class="pr-0 pl-3 contactForm_textInput" type="text" id="name" name="name" placeholder="Nom">
+                    <input class="pr-0 pl-3 contactForm_textInput" type="text" id="name" name="name" placeholder="Nom" required>
 
                 </div>
 
-                <div class="col-lg-6 pr-0 pl-3 d-flex flex-column">
+                <div class="col-lg-6 pt-lg-0 pt-sm-3 pr-0 pl-lg-3 pl-sm-0 d-flex flex-column">
 
                     <label class="contactForm_label" for="firstname">Prénom</label>
-                    <input class="pr-0 pl-3 contactForm_textInput" type="text" id="firstname" name="firstname" placeholder="Prénom">
+                    <input class="pr-0 pl-3 contactForm_textInput" type="text" id="firstname" name="firstname" placeholder="Prénom" required>
 
                 </div>
 
@@ -53,14 +53,14 @@
             <div class="row mb-3 mx-0">
 
                 <label class="contactForm_label" for="email">Adresse électronique</label>
-                <input class="pr-0 pl-3 contactForm_textInput" type="text" id="email" name="email" placeholder="Adresse électronique">
+                <input class="pr-0 pl-3 contactForm_textInput" type="text" id="email" name="email" placeholder="Adresse électronique" required>
 
             </div>
 
             <div class="row mb-3 mx-0">
 
                 <label class="contactForm_label" for="message">Message</label>
-                <textarea class="contactForm_textarea" name="message" id="message" cols="30" rows="10"></textarea>
+                <textarea class="contactForm_textarea" name="message" id="message" cols="30" rows="10" required></textarea>
 
             </div>
 
@@ -84,7 +84,7 @@
 
             <!-- Validation form button -->
 
-            <div class="text-left">
+            <div class="text-right">
 
                 <input class="btn" type="submit" id="submit" value="Envoyer">
 

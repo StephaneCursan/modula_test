@@ -1,46 +1,72 @@
 <?php
-session_start();
-if(isset($_POST['username']) && isset($_POST['password']))
-{
-    // connexion à la base de données
-    $server = 'localhost';
-    $db = 'modula_test';
-    $db_username = 'root';
-    $db_password = 'root';
-    
-    $dbco = mysqli_connect($server, $db_username, $db_password, $db)
-           or die('could not connect to database');
-    
-    // on applique les deux fonctions mysqli_real_escape_string et htmlspecialchars
-    // pour éliminer toute attaque de type injection SQL et XSS
-    $username = mysqli_real_escape_string($dbco,htmlspecialchars($_POST['username'])); 
-    $password = mysqli_real_escape_string($dbco,htmlspecialchars($_POST['password']));
-    
-    if($username !== "" && $password !== "")
-    {
-        $requete = "SELECT count(*) FROM users where 
-              nom_utilisateur = '".$username."' and mot_de_passe = '".$password."' ";
-        $exec_requete = mysqli_query($dbco, $requete);
-        $reponse = mysqli_fetch_array($exec_requete);
-        $count = $reponse['count(*)'];
-        if($count != 0) // nom d'utilisateur et mot de passe correctes
-        {
-           $_SESSION['username'] = $username;
-           header('Location: backoffice.php');
+
+    /* Starts a new session or resumes an existing session */
+
+    session_start();
+
+    /* Data management */
+
+    if (isset($_POST['username']) && isset($_POST['password'])) {
+
+        /* Data transmission to the database */
+
+        $server = 'localhost';
+        $db = 'modula_test';
+        $userdb = 'root';
+        $pwddb = 'root';
+        
+        /* Database connection */
+
+        $dbco = mysqli_connect($server, $userdb, $pwddb, $db)
+            or die('could not connect to database');
+
+        /* conversion of special characters to HTML entities
+        to eliminate SQL and XSS injection attacks */
+        
+        $username = addslashes(htmlspecialchars($_POST['username'])); 
+        $password = addslashes(htmlspecialchars($_POST['password']));
+
+        if ($username !== "" && $password !== "") {
+
+            /* Verification of username and password with those stored in the database */
+
+            $req = "SELECT count(*) FROM users where 
+                nom_utilisateur = '".$username."' and mot_de_passe = '".$password."' ";
+            $exec_req = mysqli_query($dbco, $req);
+            $answer = mysqli_fetch_array($exec_req);
+            $count = $answer['count(*)'];
+            
+            /* Username and password are correct */
+
+            if ($count != 0) {
+
+                $_SESSION['username'] = $username;
+                header('Location: backoffice.php');
+
+            } else {
+
+                /* Username and password are incorrect */
+
+                header('Location: login.php?erreur=1');
+
+            }
+
+        } else {
+
+            /* Username or password has not been entered */
+
+            header('Location: login.php?erreur=2');
+
         }
-        else
-        {
-           header('Location: login.php?erreur=1'); // utilisateur ou mot de passe incorrect
-        }
+
+    } else {
+
+        header('Location: login.php');
+
     }
-    else
-    {
-       header('Location: login.php?erreur=2'); // utilisateur ou mot de passe vide
-    }
-}
-else
-{
-   header('Location: login.php');
-}
-mysqli_close($dbco); // fermer la connexion
+
+    /* Database logout */
+
+    mysqli_close($dbco);
+
 ?>

@@ -22,7 +22,7 @@
 
         </div>
 
-        <form action="login_process.php" id="login" method="post" class="p-5">
+        <form action="login_process.php" id="login" method="post" class="pt-5 px-5">
 
             <!-- Input fields -->
 
@@ -37,7 +37,7 @@
 
             </div>
 
-            <div class="row mb-2 mx-0">
+            <div class="row mb-4 mx-0">
 
                 <div class="col-lg-6 offset-lg-3">
 

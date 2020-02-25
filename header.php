@@ -6,13 +6,13 @@
 
             <!-- Display of the logo -->
 
-            <div class="col-lg-1 col-md-1 col-sm-1 pt-3 px-0 text-center">
+            <div class="col-lg-1 col-sm-1 mr-3 pt-3 px-0 text-center">
 
                 <a href="index.php">
 
                     <img src="images/logo.png"
                          alt="amicale des anciens guérilleros espagnols en france - forces françaises de l'intérieur"
-                         class="img-fluid headerLogo">
+                         class="headerLogo">
 
                 </a>
 
@@ -20,14 +20,10 @@
 
             <!-- Branding name -->
 
-            <div class="row pl-2 pt-5 mx-0">
+            <div class="col-lg col-sm pt-5 px-0">
 
-                <div class="col-lg col-md col-sm px-0">
-
-                    <h1 class="headerBranding_shortname pt-2">AAGEF-FFI section de la Gironde</h1>
-                    <h2 class="headerBranding_longname">Amicale des anciens guérilleros espagnols en france - Forces françaises de l'intérieur</h2>
-
-                </div>
+                <h1 class="headerBranding_shortname pt-2">AAGEF-FFI section de la Gironde</h1>
+                <h2 class="headerBranding_longname">Amicale des anciens guérilleros espagnols en france - Forces françaises de l'intérieur</h2>
 
             </div>
 

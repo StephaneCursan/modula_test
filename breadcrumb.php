@@ -6,7 +6,7 @@
 
         <ul class="pl-3">
 
-            <li class="w-100 pt-3 headerBreadcrumb_iconHome">
+            <li class="w-100 pt-3">
 
                 <!-- Display of the Home icon -->
 
